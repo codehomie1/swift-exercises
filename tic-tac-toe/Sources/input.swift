@@ -35,6 +35,9 @@ func getPosition(_ position: Int) -> (Int, Int) {
         case 4: return (1,0)
         case 5: return (1,1)
         case 6: return (1,2)
+        case 7: return (2,0)
+        case 8: return (2,1)
+        case 9: return (2,2)
         default: return (-1,-1)
     }
 }

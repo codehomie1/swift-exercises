@@ -24,3 +24,18 @@ func printBoard(_ board: [[String]]) -> Void {
     }
     print("\n")
 }
+
+@MainActor
+func isBoardFull() -> Bool {
+
+    // if theres at least 1 cell empty the board is not full
+    for row in board {
+        for col in row {
+            if col != "X" || col != "O" {
+                return false
+            }
+        }
+    }
+
+    return true
+}

@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-exercises}/tic-tac-toe",
+            "name": "Debug tic-tac-toe (tic-tac-toe)",
+            "program": "${workspaceFolder:swift-exercises}/tic-tac-toe/.build/debug/tic-tac-toe",
+            "preLaunchTask": "swift: Build Debug tic-tac-toe (tic-tac-toe)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-exercises}/tic-tac-toe",
+            "name": "Release tic-tac-toe (tic-tac-toe)",
+            "program": "${workspaceFolder:swift-exercises}/tic-tac-toe/.build/release/tic-tac-toe",
+            "preLaunchTask": "swift: Build Release tic-tac-toe (tic-tac-toe)"
+        }
+    ]
+}

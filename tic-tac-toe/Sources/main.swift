@@ -12,18 +12,23 @@ var board: [[String]] = [
     ["7", "8", "9"]
 ]
 
-var currentPlayerTurn: Int = Bool.random() ? 1 : 0
-
-
-printBoard()
-takeTurn()
-switchPlayerTurn()
-printBoard()
-takeTurn()
-switchPlayerTurn()
+var currentPlayerTurn: String = Bool.random() ? "X" : "O"
 printBoard()
 
+while !isBoardFull() {
+    takeTurn()
+    printBoard()
+    if isWinner() {
+        print("Player \(currentPlayerTurn) has won !!")
+        break
+    }
 
+    switchPlayerTurn()
+}
+
+if isBoardFull() {
+    print("Nobody won ...")
+}
 
 
 

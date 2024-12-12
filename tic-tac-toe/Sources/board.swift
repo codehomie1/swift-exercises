@@ -1,10 +1,9 @@
-
-/* 
-    holds board functions like printing
+/*
+    holds board functions 
 */
 
 @MainActor
-func printBoard() -> Void {
+func printBoard() {
 
     let rows = board.count
     let cols = board[0].count
@@ -28,15 +27,25 @@ func printBoard() -> Void {
 
 @MainActor
 func isBoardFull() -> Bool {
-
-    // if theres at least 1 cell empty the board is not full
+    
+    //if a cell not equal to 0 or X then its an empty cell
+    // an empty cell means the board is not full
     for row in board {
         for col in row {
-            if col != "X" || col != "O" {
+            if col != "X" && col != "O" {
                 return false
             }
         }
     }
 
     return true
+}
+
+@MainActor
+func resetBoard() {
+    board = [
+        ["1", "2", "3"],
+        ["4", "5", "6"],
+        ["7", "8", "9"],
+    ]
 }

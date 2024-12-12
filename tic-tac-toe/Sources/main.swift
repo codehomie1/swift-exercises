@@ -12,12 +12,18 @@ var board: [[String]] = [
     ["7", "8", "9"]
 ]
 
+var currentPlayerTurn: Int = Bool.random() ? 1 : 0
 
-printBoard(board)
-takeTurn(0)
-printBoard(board)
-takeTurn(1)
-printBoard(board)
+
+printBoard()
+takeTurn()
+switchPlayerTurn()
+printBoard()
+takeTurn()
+switchPlayerTurn()
+printBoard()
+
+
 
 
 

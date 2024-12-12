@@ -3,7 +3,8 @@
     holds board functions like printing
 */
 
-func printBoard(_ board: [[String]]) -> Void {
+@MainActor
+func printBoard() -> Void {
 
     let rows = board.count
     let cols = board[0].count

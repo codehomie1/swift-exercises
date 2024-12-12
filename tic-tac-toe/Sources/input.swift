@@ -1,12 +1,12 @@
 
 
 @MainActor
-func getPlayerTurn(turnof player: Int) -> (Int, Int) {
+func getPlayerTurn() -> (Int, Int) {
     
-    print("select positon to play: ")
+    print("Player \(currentPlayerTurn) select positon to play: ")
     var position = Int(readLine()!) ?? -1
 
-    while position < 1 || position > 6 {
+    while position < 1 || position > 9 {
         print("position \(position) out of bounds!")
         print("select positon to play: ")
         position = Int(readLine()!) ?? -1

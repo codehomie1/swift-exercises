@@ -5,11 +5,19 @@
     and checking if games over. 
 */
 
+
+
+
 @MainActor
-func takeTurn(_ player: Int) -> Void {
-    let (x,y) = getPlayerTurn(turnof: player)
+func switchPlayerTurn() -> Void {
+    currentPlayerTurn  = currentPlayerTurn == 1 ? 0 : 1
+}
+
+@MainActor
+func takeTurn() -> Void {
+    let (x,y) = getPlayerTurn()
   
-    if player == 0 {
+    if currentPlayerTurn == 0 {
         board[x][y] = "X"
     } else {
         board[x][y] = "O"

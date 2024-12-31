@@ -6,7 +6,7 @@
 @MainActor
 func getPlayerTurn() -> (Int, Int) {
 
-    print("Player \(currentPlayerTurn) select positon to play(0-9): ")
+    print("Player \(currentPlayerTurn) select positon to play(1-9): ")
     var position = Int(readLine()!) ?? -1
 
     while position < 1 || position > 9 {

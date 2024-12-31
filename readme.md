@@ -22,7 +22,7 @@ swiftc main.swift -o executableName
 swift package init --type executable
 ```
 
-### Generate Docs
+### Run Package (ex tic-tac-toe)
 ```sh
-swift package generate-xcodeproj
+swift run 
 ```
